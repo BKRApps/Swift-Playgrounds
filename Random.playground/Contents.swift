@@ -110,6 +110,7 @@ let offerDict = ["ofName":"25% cashback on All Visa Cards","ofPeriod":"Valid til
 
 let timer = CardTypes.timerCardType(TimerCard(dict: timerDict)!)
 cardTypesArray.append(timer)
+
 let offer = CardTypes.offerCardType(OfferCard(dict: offerDict)!)
 cardTypesArray.append(offer)
 
