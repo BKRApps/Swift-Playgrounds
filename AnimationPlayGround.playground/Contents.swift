@@ -15,8 +15,49 @@ subView.backgroundColor = UIColor.white
 containerView.addSubview(subView)
 PlaygroundPage.current.liveView = containerView
 
+let numberLabel = UILabel(frame: CGRect(x: 150, y: 150, width: 120, height: 25))
+numberLabel.text = "Kumar Reddy"
+numberLabel.textColor = UIColor.black
+containerView.addSubview(numberLabel)
+
+// scale transform
+/*UIView.animate(withDuration: 1.0, animations: {
+    let scale = CGAffineTransform(scaleX: 3.0, y: 3.0)
+    numberLabel.transform = scale
+})*/
+
+// translation transform
+/*UIView.animate(withDuration: 1.0, animations: {
+    let translation = CGAffineTransform(translationX: 50.0, y: 50.0)
+    numberLabel.transform = translation
+})*/
+
+//translation & scale
+//UIView.animate(withDuration: 1.0, animations: {
+//    let translation = CGAffineTransform(translationX: 50.0, y: 50.0)
+//    let scale = CGAffineTransform(scaleX: 3.0, y: 3.0)
+//    let transform = translation.concatenating(scale)
+//    numberLabel.transform = transform
+//})
 
 
+//UIView.animate(withDuration: 1.0, animations: {
+//    let translation = CGAffineTransform(translationX: 75.0, y: 75.0)
+//    let scale = CGAffineTransform(scaleX: 5.0, y: 5.0)
+//    let transform = scale.concatenating(translation)
+//    numberLabel.transform = transform
+//})
+
+UIView.animate(withDuration: 2.0, delay: 0.0, options: [.repeat,.autoreverse], animations: {
+    let rotation = CGAffineTransform(rotationAngle: (CGFloat.pi)/1)
+    let scale = CGAffineTransform(scaleX: 2.0, y: 2.0)
+    let transform = rotation.concatenating(scale)
+    numberLabel.transform = transform
+    let font = numberLabel.font
+    numberLabel.font = UIFont(name: (font?.fontName)!, size: 17.0)
+}, completion: nil)
+
+/*
 let origin = UILabel(frame: CGRect(x: 50, y: 50, width: 100, height: 50))
 origin.text = "Hyderabad"
 origin.textColor = UIColor.red
@@ -40,6 +81,7 @@ UIView.animate(withDuration: 1.0, delay: 1.0, usingSpringWithDamping: 0.7, initi
         temp.removeFromSuperview()
         origin.text = "Bangalore"
     })
+ */
 
 
 
