@@ -50,7 +50,7 @@ containerView.addSubview(numberLabel)
 
 UIView.animate(withDuration: 2.0, delay: 0.0, options: [.repeat,.autoreverse], animations: {
     let rotation = CGAffineTransform(rotationAngle: (CGFloat.pi)/1)
-    let scale = CGAffineTransform(scaleX: 2.0, y: 2.0)
+    let scale = CGAffineTransform(scaleX: 3.0, y: 3.0)
     let transform = rotation.concatenating(scale)
     numberLabel.transform = transform
     let font = numberLabel.font
